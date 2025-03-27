@@ -1,0 +1,67 @@
+﻿@model HotelBookingApp.DTOs.RoomDto
+@{
+    ViewData["Title"] = "Edit Room";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit Room</h2>
+
+<!-- IMPORTANT: enctype is required for file uploads -->
+<form asp-action="Edit" method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="ImagePath" />
+
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PricePerNight"></label>
+        <input asp-for="PricePerNight" class="form-control" />
+        <span asp-validation-for="PricePerNight" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MaximumGuests"></label>
+        <input asp-for="MaximumGuests" class="form-control" />
+        <span asp-validation-for="MaximumGuests" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RoomTypeId"></label>
+        <select asp-for="RoomTypeId" class="form-control" asp-items="ViewBag.RoomTypes"></select>
+        <span asp-validation-for="RoomTypeId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="HotelId"></label>
+        <select asp-for="HotelId" class="form-control" asp-items="ViewBag.Hotels"></select>
+        <span asp-validation-for="HotelId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group form-check">
+        <input asp-for="IsAvailable" class="form-check-input" />
+        <label asp-for="IsAvailable" class="form-check-label"></label>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ImageFile">Change Room Image</label>
+        <input asp-for="ImageFile" type="file" class="form-control" />
+        <span asp-validation-for="ImageFile" class="text-danger"></span>
+    </div>
+
+    @if (!string.IsNullOrEmpty(Model.ImagePath))
+    {
+        <div class="mb-3">
+            <strong>Current Image:</strong><br />
+            <img src="@Model.ImagePath" alt="Room Image" style="max-height: 200px;" class="img-thumbnail" />
+        </div>
+    }
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

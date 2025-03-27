@@ -1,0 +1,49 @@
+﻿@model List<HotelBookingApp.ViewModels.RoomViewModel>
+
+@{
+    ViewData["Title"] = "Manage Rooms";
+}
+
+<h1>Manage Rooms</h1>
+
+<a href="@Url.Action("CreateRoom", "Admin")" class="btn btn-success mb-3">Add Room</a>
+
+<table class="table table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Hotel</th>
+            <th>Type</th>
+            <th>Price per Night</th>
+            <th>Availability</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var room in Model)
+        {
+            <tr>
+                <td>@room.Id</td>
+                <td>@room.Name</td>
+                <td>@room.HotelName</td>
+                <td>@room.RoomTypeName</td>
+                <td>$@room.PricePerNight</td>
+                <td>
+                    @if (room.IsAvailable)
+                    {
+                        <span class="badge badge-success">Available</span>
+                    }
+                    else
+                    {
+                        <span class="badge badge-danger">Not Available</span>
+                    }
+                </td>
+                <td>
+                    <a href="@Url.Action("EditRoom", "Admin", new { id = room.Id })" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="@Url.Action("DeleteRoom", "Admin", new { id = room.Id })" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this room?');">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

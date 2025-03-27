@@ -1,0 +1,116 @@
+﻿@model IEnumerable<HotelBookingApp.ViewModels.RoomViewModel>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Rooms";
+
+    var selectedHotelId = Context.Request.Query["hotelId"].ToString();
+    var today = DateTime.Today.ToString("yyyy-MM-dd");
+}
+
+<h2 class="text-center mb-4">Available Rooms</h2>
+
+@using Microsoft.AspNetCore.Authorization
+
+@if (User.IsInRole("Admin") || User.IsInRole("Manager"))
+{
+    <a asp-action="Create" class="btn btn-success mb-3">Add New Room</a>
+}
+
+<!-- Filter Form -->
+<form method="get" class="mb-4">
+    <div class="row g-3">
+        <div class="col-md-3">
+            <label>Hotel</label>
+            <select name="hotelId" class="form-control">
+                <option value="">All Hotels</option>
+                @foreach (var hotel in (SelectList)ViewBag.Hotels)
+                {
+                    var selectedAttr = hotel.Value == selectedHotelId ? "selected" : "";
+                    @Html.Raw($"<option value=\"{hotel.Value}\" {selectedAttr}>{hotel.Text}</option>")
+                }
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <label>Check-In</label>
+            <input type="date" name="checkIn" class="form-control" value="@ViewBag.SelectedCheckIn" min="@today" />
+        </div>
+
+        <div class="col-md-3">
+            <label>Check-Out</label>
+            <input type="date" name="checkOut" class="form-control" value="@ViewBag.SelectedCheckOut" min="@today" />
+        </div>
+
+        <div class="col-md-3">
+            <label>Price Per Night</label>
+            <input type="number" name="minPrice" class="form-control" placeholder="Min Price" value="@ViewBag.SelectedMinPrice" />
+            <input type="number" name="maxPrice" class="form-control mt-2" placeholder="Max Price" value="@ViewBag.SelectedMaxPrice" />
+        </div>
+
+        <div class="col-md-2">
+            <label>Room Type</label>
+            <select name="roomTypeId" class="form-control">
+                <option value="">Select a room</option>
+                <option value="1" selected="@(ViewBag.SelectedRoomTypeId == 1)">Standard</option>
+                <option value="2" selected="@(ViewBag.SelectedRoomTypeId == 2)">Single Room</option>
+                <option value="3" selected="@(ViewBag.SelectedRoomTypeId == 3)">Double Room</option>
+                <option value="4" selected="@(ViewBag.SelectedRoomTypeId == 4)">Deluxe Room</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label>Guests</label>
+            <input type="number" name="guests" class="form-control" placeholder="Guests" value="@ViewBag.SelectedGuests" />
+        </div>
+        <div class="row align-items-end">        
+            <!-- Push buttons to the right using ms-auto inside a flex container -->
+            <div class="col-md-4 ms-auto d-flex justify-content-end gap-2">
+                <button type="submit" class="btn btn-primary">Filter</button>
+                <a href="/Rooms" class="btn btn-secondary">Reset</a>
+            </div>
+
+        </div>
+
+    </div>
+</form>
+
+<!-- Rooms Grid -->
+<div class="row">
+    @foreach (var room in Model)
+    {
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img src="@(string.IsNullOrEmpty(room.ImagePath) ? "/images/no-image.png" : room.ImagePath)"
+                     alt="@room.Name"
+                     class="card-img-top"
+                     style="height: 250px; object-fit: cover;"
+                     onerror="this.onerror=null; this.src='/images/no-image.png';" />
+
+                <div class="card-body">
+                    <h5 class="card-title">@room.Name</h5>
+                    <p><strong>Room Type:</strong> @room.RoomTypeName</p>
+                    <p><strong>Price Per Night:</strong> ₾ @room.PricePerNight</p>
+                    <p><strong>Max Guests:</strong> @room.MaximumGuests</p>
+                    <p><strong>Available:</strong> @(room.IsAvailable ? "Yes" : "No")</p>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
+                        {
+                            <div>
+                                <a asp-action="Edit" asp-route-id="@room.Id" class="btn btn-sm btn-warning me-1">Edit</a>
+                                <form asp-action="Delete" asp-route-id="@room.Id" method="post" class="d-inline">
+                                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Delete this room?');">Delete</button>
+                                </form>
+                            </div>
+                        }
+                        <form asp-controller="Bookings" asp-action="Create" method="get">
+                            <input type="hidden" name="roomId" value="@room.Id" />
+                            <input type="hidden" name="hotelId" value="@room.HotelId" />
+                            <button type="submit" class="btn btn-sm btn-success">Book</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

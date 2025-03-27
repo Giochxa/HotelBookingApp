@@ -1,0 +1,15 @@
+﻿@model HotelBookingApp.ViewModels.BookingViewModel
+
+@{
+    ViewData["Title"] = "Booking Details";
+}
+
+<div class="container">
+    <h2>Booking Details</h2>
+    <p><strong>Room ID:</strong> @Model.RoomId</p>
+    <p><strong>Check-In Date:</strong> @Model.CheckInDate.ToShortDateString()</p>
+    <p><strong>Check-Out Date:</strong> @Model.CheckOutDate.ToShortDateString()</p>
+    <p><strong>Total Price:</strong> $@Model.TotalPrice</p>
+    <p><strong>Status:</strong> @(Model.IsConfirmed ? "Confirmed" : "Pending")</p>
+    <a href="/Booking/Cancel/@Model.Id" class="btn btn-danger">Cancel Booking</a>
+</div>

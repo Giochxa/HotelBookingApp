@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewData["Title"] - Hotel Booking</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+                <img src="~/images/logo.png" alt="Hotel Booking Logo" height="50">
+            </a>
+
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "Home")">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "Hotel")">Hotels</a></li>
+                <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "Room")">Rooms</a></li>
+                <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "Bookings")">Booked Rooms</a></li>
+                @if (User.IsInRole("Admin"))
+
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Users">User Management</a>
+                    </li>
+                }
+
+            </ul>
+
+            <ul class="navbar-nav">
+                @if (User.Identity.IsAuthenticated)
+
+                {
+                    <li class="nav-item">
+                        <span class="nav-link">Welcome, @User.Identity.Name</span>
+                    </li>
+                    <li class="nav-item">
+                        <form asp-controller="Account" asp-action="Logout" method="post">
+                            <button type="submit" class="btn btn-danger">Logout</button>
+                        </form>
+                    </li>
+                }
+
+                else
+
+                {
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white me-2" asp-controller="Account" asp-action="Login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-danger text-white" asp-controller="Account" asp-action="Register">Register</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        @RenderBody()
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+        <p>&copy; @DateTime.Now.Year Hotel Booking. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div aria-live="polite" aria-atomic="true" class="position-relative">
+        <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1100">
+            <div id="successToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        @TempData["Success"]
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    @RenderSection("Scripts", required: false)
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var toastEl = document.getElementById("successToast");
+            if (toastEl && toastEl.querySelector(".toast-body").textContent.trim() !== "") {
+                var toast = new bootstrap.Toast(toastEl);
+                toast.show();
+            }
+        });
+    </script>
+</body>
+</html>

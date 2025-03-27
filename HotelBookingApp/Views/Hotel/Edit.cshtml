@@ -1,0 +1,70 @@
+﻿@model HotelBookingApp.DTOs.HotelDto
+
+@{
+    ViewData["Title"] = "Edit Hotel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit Hotel</h2>
+
+<form asp-action="Edit" method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Address"></label>
+        <input asp-for="Address" class="form-control" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="City"></label>
+        <input asp-for="City" class="form-control" />
+        <span asp-validation-for="City" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Country"></label>
+        <input asp-for="Country" class="form-control" />
+        <span asp-validation-for="Country" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Rating"></label>
+        <input asp-for="Rating" class="form-control" type="number" step="0.1" min="0" max="5" />
+        <span asp-validation-for="Rating" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ImageFile"></label>
+        <input asp-for="ImageFile" class="form-control" type="file" />
+        <span asp-validation-for="ImageFile" class="text-danger"></span>
+    </div>
+
+    <input type="hidden" asp-for="FeaturedImage" />
+
+    @if (!string.IsNullOrEmpty(Model.FeaturedImage))
+    {
+        <div class="mb-3">
+            <strong>Current Image:</strong><br />
+            <img src="@Model.FeaturedImage" alt="Room Image" style="max-height: 200px;" class="img-thumbnail" />
+        </div>
+    }
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+

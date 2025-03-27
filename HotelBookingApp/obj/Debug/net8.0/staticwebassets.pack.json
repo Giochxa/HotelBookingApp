@@ -1,0 +1,369 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\account.html",
+      "PackagePath": "staticwebassets\\account.html"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\hotel-hero.jpg",
+      "PackagePath": "staticwebassets\\images\\hotel-hero.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\hotels\\4a310cf7-9dc1-4b85-9ce5-e5c47654fa8c.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\4a310cf7-9dc1-4b85-9ce5-e5c47654fa8c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\hotels\\5f3ba50d-bcae-4150-9d24-79cf6cc37c68.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\5f3ba50d-bcae-4150-9d24-79cf6cc37c68.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\hotels\\68a212fe-2b81-4a9d-9697-345390315866.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\68a212fe-2b81-4a9d-9697-345390315866.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\hotels\\8c25352b-7e5a-4465-ae2a-8691fecff1a7.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\8c25352b-7e5a-4465-ae2a-8691fecff1a7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\hotels\\Old_tbilisi.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\Old_tbilisi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\hotels\\a8abe52f-6144-4529-b78c-7bb0562e9fd1.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\a8abe52f-6144-4529-b78c-7bb0562e9fd1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\hotels\\b7891002-493e-4805-9631-584eca168282.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\b7891002-493e-4805-9631-584eca168282.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\hotels\\budget.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\budget.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\hotels\\e43b2e04-1d0e-414d-bf35-526b8b35d2f1.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\e43b2e04-1d0e-414d-bf35-526b8b35d2f1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\hotels\\f4d3ef49-8329-4c89-8dc1-11c319e1a529.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\f4d3ef49-8329-4c89-8dc1-11c319e1a529.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\hotels\\luxury.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\luxury.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\no-image.png",
+      "PackagePath": "staticwebassets\\images\\no-image.png"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\rooms\\078bbcbd-e270-40f1-9bc7-a919599a53d2.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\078bbcbd-e270-40f1-9bc7-a919599a53d2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\rooms\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\rooms\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\rooms\\255b2a2d-6938-412c-9253-e6ae3ba1b0c0.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\255b2a2d-6938-412c-9253-e6ae3ba1b0c0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\rooms\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\rooms\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\rooms\\5.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\rooms\\6.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\rooms\\6d0e8355-51da-4be8-b407-4d1553b63c84.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\6d0e8355-51da-4be8-b407-4d1553b63c84.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\rooms\\7.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\rooms\\815d7ec5-af5b-47c4-b3c1-f23f49284ceb.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\815d7ec5-af5b-47c4-b3c1-f23f49284ceb.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\images\\rooms\\893ddeaf-bbac-45c4-aa8e-88182614d297.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\893ddeaf-bbac-45c4-aa8e-88182614d297.jpg"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\george.chkhaidze\\source\\repos\\HotelBookingApp\\HotelBookingApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HotelBookingApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.HotelBookingApp.props",
+      "PackagePath": "build\\HotelBookingApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.HotelBookingApp.props",
+      "PackagePath": "buildMultiTargeting\\HotelBookingApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.HotelBookingApp.props",
+      "PackagePath": "buildTransitive\\HotelBookingApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

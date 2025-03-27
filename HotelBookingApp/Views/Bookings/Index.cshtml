@@ -1,0 +1,118 @@
+﻿@model IEnumerable<HotelBookingApp.Models.Booking>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Bookings";
+    var isAdminOrManager = User.IsInRole("Admin") || User.IsInRole("Manager");
+}
+
+<h2 class="mb-4">Bookings</h2>
+
+<form method="get" class="mb-4">
+    <div class="row g-3">
+
+        @* User Email filter (Admin/Manager only) *@
+        @if (isAdminOrManager)
+        {
+            <div class="col-md-3">
+                <label>User Email</label>
+                <select name="userEmailFilter" class="form-select">
+                    <option value="">All Users</option>
+                    @foreach (var user in ViewBag.Users as List<SelectListItem>)
+                    {
+                        <option value="@user.Text" selected="@(user.Value == ViewBag.SelectedUserId?.ToString() ? "selected" : null)">
+                            @user.Text
+                        </option>
+                    }
+                </select>
+            </div>
+        }
+
+        <div class="col-md-2">
+            <label>Room</label>
+            <select name="roomId" class="form-select">
+                <option value="">All</option>
+                @foreach (var room in ViewBag.Rooms as SelectList)
+                {
+                    <option value="@room.Value" selected="@(room.Selected ? "selected" : null)">@room.Text</option>
+                }
+            </select>
+        </div>
+
+        <div class="col-md-2">
+            <label>Hotel</label>
+            <select name="hotelId" class="form-select">
+                <option value="">All</option>
+                @foreach (var hotel in ViewBag.Hotels as SelectList)
+                {
+                    <option value="@hotel.Value" selected="@(hotel.Selected ? "selected" : null)">@hotel.Text</option>
+                }
+            </select>
+        </div>
+
+        <div class="col-md-2">
+            <label>Check-In</label>
+            <input type="date" name="checkIn" class="form-control" value="@ViewBag.CheckIn" />
+        </div>
+
+        <div class="col-md-2">
+            <label>Check-Out</label>
+            <input type="date" name="checkOut" class="form-control" value="@ViewBag.CheckOut" />
+        </div>
+
+        <div class="col-md-12 d-flex justify-content-end">
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">Filter</button>
+                <a href="/Bookings" class="btn btn-secondary">Reset</a>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+<table class="table table-bordered">
+    <thead class="table-light">
+        <tr>
+            @if (isAdminOrManager)
+            {
+                <th>User</th>
+            }
+            <th>Room</th>
+            <th>Hotel</th>
+            <th>Check-In</th>
+            <th>Check-Out</th>
+            <th>Total Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var booking in Model)
+        {
+            var isPast = booking.CheckInDate < DateTime.Today;
+            <tr>
+                @if (isAdminOrManager)
+                {
+                    <td>@(ViewBag.UserEmails?[booking.UserId] ?? "N/A")</td>
+                }
+                <td>@booking.Room?.Name</td>
+                <td>@booking.Hotel?.Name</td>
+                <td>@booking.CheckInDate.ToShortDateString()</td>
+                <td>@booking.CheckOutDate.ToShortDateString()</td>
+                <td>₾@booking.TotalPrice</td>
+                <td>
+                    @if (!isPast)
+                    {
+                        <a asp-action="Edit" asp-route-id="@booking.Id" class="btn btn-sm btn-warning me-1">Edit</a>
+                        <form asp-action="Delete" asp-route-id="@booking.Id" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?');">Delete</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <span class="text-muted">Past</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
