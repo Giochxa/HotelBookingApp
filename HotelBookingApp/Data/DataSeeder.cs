@@ -110,6 +110,24 @@ namespace HotelBookingApp.Data
                     context.RoomTypes.Add(standardType);
                     await context.SaveChangesAsync();
                 }
+                var singleRoomType = await context.RoomTypes.FirstOrDefaultAsync() ?? new RoomType { Name = "Single Room" };
+                if (singleRoomType.Id == 1)
+                {
+                    context.RoomTypes.Add(singleRoomType);
+                    await context.SaveChangesAsync();
+                }
+                var doubleRoomType = await context.RoomTypes.FirstOrDefaultAsync() ?? new RoomType { Name = "Double Room" };
+                if (doubleRoomType.Id == 2)
+                {
+                    context.RoomTypes.Add(doubleRoomType);
+                    await context.SaveChangesAsync();
+                }
+                var deluxRoomType = await context.RoomTypes.FirstOrDefaultAsync() ?? new RoomType { Name = "Deluxe Room" };
+                if (deluxRoomType.Id == 3)
+                {
+                    context.RoomTypes.Add(deluxRoomType);
+                    await context.SaveChangesAsync();
+                }
 
                 if (luxuryHotel != null && budgetHotel != null)
                 {
