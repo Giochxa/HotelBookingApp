@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
@@ -10,10 +10,8 @@ namespace HotelBookingApp.Data
     public class DataSeeder
     {
         public static async Task SeedData(ApplicationDbContext context, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
-
-
         {
-            // Ensure database is created
+            // Ensure database is created and up to date
             await context.Database.MigrateAsync();
 
             // Seed Roles
@@ -23,7 +21,6 @@ namespace HotelBookingApp.Data
                 if (!await roleManager.RoleExistsAsync(roleName))
                 {
                     await roleManager.CreateAsync(new IdentityRole { Name = roleName });
-
                 }
             }
 
@@ -40,7 +37,6 @@ namespace HotelBookingApp.Data
                 };
 
                 var result = await userManager.CreateAsync(adminUser, "Admin@123");
-
                 if (result.Succeeded)
                 {
                     await userManager.AddToRoleAsync(adminUser, "Admin");
@@ -60,18 +56,17 @@ namespace HotelBookingApp.Data
                 };
 
                 var result = await userManager.CreateAsync(managerUser, "Manager@123");
-
                 if (result.Succeeded)
                 {
                     await userManager.AddToRoleAsync(managerUser, "Manager");
                 }
             }
 
-            // Seed User's User
+            // Seed Regular User
             var userEmail = "user@example.com";
             if (await userManager.FindByEmailAsync(userEmail) == null)
             {
-                var userUser = new ApplicationUser
+                var regularUser = new ApplicationUser
                 {
                     UserName = userEmail,
                     Email = userEmail,
@@ -79,23 +74,51 @@ namespace HotelBookingApp.Data
                     EmailConfirmed = true
                 };
 
-                var result = await userManager.CreateAsync(userUser, "User@123");
-
+                var result = await userManager.CreateAsync(regularUser, "User@123");
                 if (result.Succeeded)
                 {
-                    await userManager.AddToRoleAsync(userUser, "User");
+                    await userManager.AddToRoleAsync(regularUser, "User");
                 }
             }
-
 
             // Seed Sample Hotels
             if (!context.Hotels.Any())
             {
                 context.Hotels.AddRange(
-                    new Hotel { Name = "Luxury Hotel", Address = "123 Main St", City = "New York", Country = "USA", Description = "A luxury hotel", Rating = 4.5, FeaturedImage = "/images/hotels/luxury.jpg" },
-                    new Hotel { Name = "Budget Inn", Address = "456 Elm St", City = "Los Angeles", Country = "USA", Description = "An affordable hotel", Rating = 3.8, FeaturedImage = "/images/hotels/budget.jpg" }
+                    new Hotel
+                    {
+                        Name = "Luxury Hotel",
+                        Address = "123 Main St",
+                        City = "New York",
+                        Country = "USA",
+                        Description = "A luxury hotel",
+                        Rating = 4.5,
+                        FeaturedImage = "/images/hotels/luxury.jpg"
+                    },
+                    new Hotel
+                    {
+                        Name = "Budget Inn",
+                        Address = "456 Elm St",
+                        City = "Los Angeles",
+                        Country = "USA",
+                        Description = "An affordable hotel",
+                        Rating = 3.8,
+                        FeaturedImage = "/images/hotels/budget.jpg"
+                    }
                 );
+                await context.SaveChangesAsync();
             }
+
+            // Seed Room Types
+            var roomTypeNames = new[] { "Standard", "Single Room", "Double Room", "Deluxe Room" };
+            foreach (var name in roomTypeNames)
+            {
+                if (!await context.RoomTypes.AnyAsync(rt => rt.Name == name))
+                {
+                    context.RoomTypes.Add(new RoomType { Name = name });
+                }
+            }
+            await context.SaveChangesAsync();
 
             // Seed Sample Rooms
             if (!context.Rooms.Any())
@@ -103,33 +126,9 @@ namespace HotelBookingApp.Data
                 var luxuryHotel = await context.Hotels.FirstOrDefaultAsync(h => h.Name == "Luxury Hotel");
                 var budgetHotel = await context.Hotels.FirstOrDefaultAsync(h => h.Name == "Budget Inn");
 
-                // If needed: ensure RoomTypes exist
-                var standardType = await context.RoomTypes.FirstOrDefaultAsync() ?? new RoomType { Name = "Standard" };
-                if (standardType.Id == 0)
-                {
-                    context.RoomTypes.Add(standardType);
-                    await context.SaveChangesAsync();
-                }
-                var singleRoomType = await context.RoomTypes.FirstOrDefaultAsync() ?? new RoomType { Name = "Single Room" };
-                if (singleRoomType.Id == 1)
-                {
-                    context.RoomTypes.Add(singleRoomType);
-                    await context.SaveChangesAsync();
-                }
-                var doubleRoomType = await context.RoomTypes.FirstOrDefaultAsync() ?? new RoomType { Name = "Double Room" };
-                if (doubleRoomType.Id == 2)
-                {
-                    context.RoomTypes.Add(doubleRoomType);
-                    await context.SaveChangesAsync();
-                }
-                var deluxRoomType = await context.RoomTypes.FirstOrDefaultAsync() ?? new RoomType { Name = "Deluxe Room" };
-                if (deluxRoomType.Id == 3)
-                {
-                    context.RoomTypes.Add(deluxRoomType);
-                    await context.SaveChangesAsync();
-                }
+                var standardType = await context.RoomTypes.FirstOrDefaultAsync(rt => rt.Name == "Standard");
 
-                if (luxuryHotel != null && budgetHotel != null)
+                if (luxuryHotel != null && budgetHotel != null && standardType != null)
                 {
                     context.Rooms.AddRange(
                         new Room
@@ -177,9 +176,6 @@ namespace HotelBookingApp.Data
                     await context.SaveChangesAsync();
                 }
             }
-
-
-            await context.SaveChangesAsync();
         }
     }
 }
